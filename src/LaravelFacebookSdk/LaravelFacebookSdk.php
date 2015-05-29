@@ -27,7 +27,7 @@ class LaravelFacebookSdk extends Facebook
         $this->url = $url;
 
         // Edited
-        $setting = Setting::first();
+        $setting = App\Models\Setting::first();
         if(count($setting) > 0){
             $config['app_id'] = $setting->facebook_app_id;
             $config['app_secret'] = $setting->facebook_app_secret;
